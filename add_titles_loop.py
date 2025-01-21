@@ -16,7 +16,7 @@ note["Дата_истечения"] = datetime.strptime(issue_date, "%d-%m-%Y")
 note["Заголовки"] = []
 while True:
     title = input("Введите название заголовка (или оставьте строку пустой для завершения): ")
-    if title == '': 
+    if not title:
         break
     note["Заголовки"].append(title)
 
@@ -31,4 +31,4 @@ print(f"Дата создания: {note['Дата_создания'].strftime('
 print(f"Дата истечения: {note['Дата_истечения'].strftime('%d-%m')}")
 
 #Выводим заголовки заметки
-print(note["Заголовки"])
+print(', '.join(note["Заголовки"]))
