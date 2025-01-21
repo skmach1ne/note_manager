@@ -121,8 +121,8 @@ while True:
 # Проверяем поиск заметки исходя из введенных данных
     find_note = None
     for note in notes:
-        if delete_function.isdigit() and int(delete_function) == note['ID'] or \
-        delete_function.isdigit() and notes.index(note) + 1 == int(delete_function) or \
+        if (delete_function.isdigit() and int(delete_function) == note['ID']) or \
+                (delete_function.isdigit() and notes.index(note) + 1 == int(delete_function)) or \
         delete_function in note['Описание_заметки'] or \
         delete_function in note['Заголовки']:
             find_note = note
