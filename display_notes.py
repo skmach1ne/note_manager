@@ -33,17 +33,17 @@ def display_notes(notes):
         return notes
 
 #Вывод данных списка если в нем введены какие-либо параметры
-print('\nВаши заметки:')
-print('-' * 30)
-for i, note in enumerate(notes, start=1):
-        print(f"Заметка №{i}:")
-        print(f"Имя пользователя: {note.get('username', 'Не указано')}")
-        print(f"Заголовок: {note.get('title', 'Не указано')}")
-        print(f"Описание: {note.get('content', 'Не указано')}")
-        print(f"Статус: {note.get('status', 'Не указано')}")
-        print(f"Дата создания: {note.get('created_date', 'Не указано')}")
-        print(f"Дедлайн: {note.get('issue_date', 'Не указано')}")
-        print("-" * 30)
+    print('\nВаши заметки:')
+    print('-' * 30)
+    for i, note in enumerate(notes, start=1):
+            print(f"Заметка №{i}:")
+            print(f"Имя пользователя: {note.get('username', 'Не указано')}")
+            print(f"Заголовок: {note.get('title', 'Не указано')}")
+            print(f"Описание: {note.get('content', 'Не указано')}")
+            print(f"Статус: {note.get('status', 'Не указано')}")
+            print(f"Дата создания: {note.get('created_date', 'Не указано')}")
+            print(f"Дедлайн: {note.get('issue_date', 'Не указано')}")
+            print("-" * 30)
 
 #Вызов функции
 display_notes(notes)
